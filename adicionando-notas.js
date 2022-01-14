@@ -1,5 +1,5 @@
 const notas = [10, 6, 8];
-notas.push(7);
+notas.push(7); // adiciona um elemento ná ultima posição da lista.
 console.log(notas);
 
 
