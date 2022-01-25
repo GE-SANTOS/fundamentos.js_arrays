@@ -1,20 +1,17 @@
-const notas = [10, 6.5, 8, 7.5];
+const notas1 = [10, 6.5, 8, 7.5]
+const notas2 = [9, 6, 6]
+const notas3 = [8.5, 9.5]
 
-let somaDasNotas = 0;
+const notasGerais = [notas1, notas2, notas3]
 
-//Tambem conhecida como callback por ser uma função que recebe outra função como parâmetro
-notas.forEach(nota => {
-        somaDasNotas += nota
-    })
-    //Percorre o array automaticamente quando o mesmo é especificado.
+let media = 0
 
-/*
-Também pode ser feito da forma abaixo, mais a forma apresentada acima é a mais usada.
+for (let i = 0; i < notasGerais.length; i++) {
+    for (let j = 0; j < notasGerais[i].length; j++) {
+        media += notasGerais[i][j] / notasGerais[i].length;
+    }
+}
 
-notas.forEach(function(nota){
-    somaDasNotas += notas
-})
- */
-let media = somaDasNotas / notas.length;
+media = media / notasGerais.length
 
-console.log(media);
+console.log(media)
